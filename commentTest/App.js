@@ -11,7 +11,7 @@ import {SafeAreaView, StyleSheet, StatusBar, Image} from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
-import Comment from './src';
+import Comment from 'react-native-comments';
 
 const App: () => React$Node = () => {
   return (
