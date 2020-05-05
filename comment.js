@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 import PropTypes from 'prop-types';
 import Modal from 'react-native-modal';
-import {Avatar} from 'react-native-elements';
+import {Avatar} from 'react-native-paper';
 import Snackbar from 'react-native-snackbar';
 import strLabels from './styles/strLabels';
 import moment from 'moment';
@@ -160,7 +160,7 @@ export default class CommentBox extends React.PureComponent {
               ]}>
               <View style={commentStyle.modalView}>
                 {isLoggedIn && this.state.profilename != undefined ? (
-                  <Avatar
+                  <Avatar.Image
                     size={40}
                     title={initials}
                     activeOpacity={0.7}
@@ -172,7 +172,7 @@ export default class CommentBox extends React.PureComponent {
                     }
                   />
                 ) : (
-                  <Avatar
+                  <Avatar.Image
                     size={40}
                     title="U"
                     activeOpacity={0.7}
@@ -260,7 +260,7 @@ export default class CommentBox extends React.PureComponent {
           <View>
             <View style={commentStyle.view2}>
               {isLoggedIn && this.props.userName != undefined ? (
-                <Avatar
+                <Avatar.Image
                   size={40}
                   title={initials}
                   activeOpacity={0.7}
@@ -272,7 +272,7 @@ export default class CommentBox extends React.PureComponent {
                   }
                 />
               ) : (
-                <Avatar
+                <Avatar.Image
                   size={40}
                   title="U"
                   activeOpacity={0.7}
@@ -322,7 +322,7 @@ export default class CommentBox extends React.PureComponent {
             renderItem={({item, index, separators}) => (
               <View style={commentStyle.view4}>
                 {item.username ? (
-                  <Avatar
+                  <Avatar.Image
                     size={40}
                     title={item.username
                       .split(' ')
@@ -338,7 +338,7 @@ export default class CommentBox extends React.PureComponent {
                     }
                   />
                 ) : (
-                  <Avatar
+                  <Avatar.Image
                     size={40}
                     title="U"
                     activeOpacity={0.7}
